@@ -32,7 +32,8 @@
 .pub-cache/
 .pub/
 /build/
-
+*.lock
+.flutter-plugins-dependencies
 # Web related
 lib/generated_plugin_registrant.dart
 
