@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Place app',
       theme: ThemeData(
         fontFamily: 'Roboto',
         primarySwatch: Colors.blue,
@@ -25,6 +25,7 @@ class MyFirstWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(context.runtimeType);
     _counter++;
     print(_counter);
     return Container(
@@ -50,8 +51,13 @@ class _MySecondWidgetState extends State<MySecondWidget> {
     });
   }
 
+  Type getContextRuntimeType() {
+    return context.runtimeType;
+  }
+
   @override
   Widget build(BuildContext context) {
+    print(getContextRuntimeType());
     _incrementCounter();
     return Container(
       child: Center(
@@ -60,6 +66,3 @@ class _MySecondWidgetState extends State<MySecondWidget> {
     );
   }
 }
-
-
-
