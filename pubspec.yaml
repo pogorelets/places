@@ -29,23 +29,23 @@ flutter:
   fonts:
     - family: Roboto
       fonts:
-        - asset: res/font/Roboto-Regular.ttf
-        - asset: res/font/Roboto-Italic.ttf
+        - asset: res/fonts/Roboto-Regular.ttf
+        - asset: res/fonts/Roboto-Italic.ttf
           style: italic
-        - asset: res/font/Roboto-Bold.ttf
-        - asset: res/font/Roboto-BoldItalic.ttf
+        - asset: res/fonts/Roboto-Bold.ttf
+        - asset: res/fonts/Roboto-BoldItalic.ttf
           style: italic
-        - asset: res/font/Roboto-Medium.ttf
-        - asset: res/font/Roboto-MediumItalic.ttf
+        - asset: res/fonts/Roboto-Medium.ttf
+        - asset: res/fonts/Roboto-MediumItalic.ttf
           style: italic
-        - asset: res/font/Roboto-Black.ttf
-        - asset: res/font/Roboto-BlackItalic.ttf
+        - asset: res/fonts/Roboto-Black.ttf
+        - asset: res/fonts/Roboto-BlackItalic.ttf
           style: italic
-        - asset: res/font/Roboto-Light.ttf
-        - asset: res/font/Roboto-LightItalic.ttf
+        - asset: res/fonts/Roboto-Light.ttf
+        - asset: res/fonts/Roboto-LightItalic.ttf
           style: italic
-        - asset: res/font/Roboto-Thin.ttf
-        - asset: res/font/Roboto-ThinItalic.ttf
+        - asset: res/fonts/Roboto-Thin.ttf
+        - asset: res/fonts/Roboto-ThinItalic.ttf
           style: italic
 
 
