@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'ui/screen/sign_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -15,51 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MySecondWidget(),
+      home: SignLightScreen(),
     );
   }
 }
-
-class MyFirstWidget extends StatelessWidget {
-  int _counter = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    _counter++;
-    print(_counter);
-    return Container(
-      child: Center(
-        child: Text("Hello!"),
-      ),
-    );
-  }
-}
-
-class MySecondWidget extends StatefulWidget {
-  @override
-  _MySecondWidgetState createState() => _MySecondWidgetState();
-}
-
-class _MySecondWidgetState extends State<MySecondWidget> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-      print(_counter);
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    _incrementCounter();
-    return Container(
-      child: Center(
-        child: Text("Hello!"),
-      ),
-    );
-  }
-}
-
-
-
