@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:places/constants.dart';
 
 class SignLightScreen extends StatefulWidget {
   @override
@@ -11,18 +12,15 @@ class _SignLightScreenState extends State<SignLightScreen> {
     return Scaffold(
 
         appBar: AppBar(
-          toolbarHeight: 112,
+          toolbarHeight: kMyToolbarHeight,
           backgroundColor: Colors.transparent,
-          elevation: 0.0,
+          elevation: kAppBarElevation,
           title: Padding(
-            padding: EdgeInsets.only(top: 40.0),
-            child: Text(
-              "Список\nинтересных мест",
+            padding: EdgeInsets.only(top: kTitlePaddingTop),
+            child: Text(titleSignLightScreen,
               textAlign: TextAlign.left,
-              style: TextStyle(color: const Color(0xFF3B3E5B),
-              fontSize: 32,
-
-              ),
+              style: TextStyle(color: kTextColor,
+              fontSize: kAppBarFontSize,),
             ),
           ),
         ),
