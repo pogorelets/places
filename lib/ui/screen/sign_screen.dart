@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:places/constants.dart';
+import 'package:places/ui/res/colors.dart';
+import 'package:places/ui/res/constants.dart';
+import 'package:places/ui/res/strings.dart';
+import 'package:places/ui/res/text_styles.dart';
+
 
 class SignLightScreen extends StatefulWidget {
   @override
@@ -19,26 +23,24 @@ class _SignLightScreenState extends State<SignLightScreen> {
             child: RichText(
               text: TextSpan(
                   text: title1,
-                  style: TextStyle(color: Colors.green, fontSize: kAppBarFontSize),
+                  style: kGreenAppBarTextStyle,
                   children: [
                     TextSpan(
                       text: title2,
-                      style: TextStyle(
-                          color: kTextColor, fontSize: kAppBarFontSize),
+                      style: kMainAppBarTextStyle,
                     ),
                     TextSpan(
                         text: title3,
-                        style: TextStyle(color: Colors.yellow, fontSize: kAppBarFontSize)),
+                        style: kYellowAppBarTextStyle),
                     TextSpan(
                         text: title4,
-                        style: TextStyle(
-                            color: kTextColor, fontSize: kAppBarFontSize))
+                        style: kMainAppBarTextStyle)
                   ]),
             ),
           ),
         ),
         body: Container(
-          child: Center(child: Text("Sign light screen")),
+
         ));
   }
 }
