@@ -3,7 +3,7 @@ import 'colors.dart';
 import 'constants.dart';
 
 const kMainAppBarTextStyle = TextStyle(
-  color: kTextColor,
+  color: kHeadTextColor,
   fontSize: kAppBarFontSize,
 );
 
