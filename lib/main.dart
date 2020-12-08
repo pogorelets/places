@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:places/ui/screen/sight_details.card.dart';
 
 import 'ui/screen/sight_card.dart';
 import 'ui/screen/sign_screen.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SignLightScreen(),
+      home: SightDetails() //SignLightScreen(),
     );
   }
 }

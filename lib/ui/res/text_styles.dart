@@ -3,7 +3,7 @@ import 'colors.dart';
 import 'constants.dart';
 
 const kMainAppBarTextStyle = TextStyle(
-  color: kTextColor,
+  color: kHeadTextColor,
   fontSize: kAppBarFontSize,
 );
 
@@ -18,3 +18,15 @@ const kHeadCardTextStyle = TextStyle(
 
 const kCardTextStyle =
     TextStyle(color: kTextColor, fontSize: 14.0, fontWeight: FontWeight.w400);
+
+const kHeadDetailsTextStyle =
+    TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: kHeadTextColor);
+
+const kTypeDetailTextStyle = TextStyle(
+    fontWeight: FontWeight.w700, fontSize: 14.0, color: kHeadTextColor);
+
+const kModeTextStyle =
+    TextStyle(fontWeight: FontWeight.w400, fontSize: 14.0, color: kTextColor);
+
+const kDetailTextStyle = TextStyle(
+    fontWeight: FontWeight.w400, fontSize: 14.0, color: kTextDetailColor);
