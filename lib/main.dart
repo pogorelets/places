@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'ui/screen/sight_card.dart';
 import 'ui/screen/sign_screen.dart';
 
 void main() {

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/res/colors.dart';
 import 'package:places/ui/res/constants.dart';
 import 'package:places/ui/res/strings.dart';
 import 'package:places/ui/res/text_styles.dart';
+import 'package:places/ui/screen/sight_card.dart';
 
+import '../../mocks.dart';
 
 class SignLightScreen extends StatefulWidget {
   @override
@@ -20,27 +21,29 @@ class _SignLightScreenState extends State<SignLightScreen> {
           elevation: kAppBarElevation,
           title: Padding(
             padding: EdgeInsets.only(top: kTitlePaddingTop),
-            child: RichText(
-              text: TextSpan(
-                  text: title1,
-                  style: kGreenAppBarTextStyle,
-                  children: [
-                    TextSpan(
-                      text: title2,
-                      style: kMainAppBarTextStyle,
-                    ),
-                    TextSpan(
-                        text: title3,
-                        style: kYellowAppBarTextStyle),
-                    TextSpan(
-                        text: title4,
-                        style: kMainAppBarTextStyle)
-                  ]),
+            child: Text(
+              titleSignLightScreen,
+              textAlign: TextAlign.left,
+              style: kMainAppBarTextStyle,
             ),
           ),
         ),
-        body: Container(
-
+        body: SingleChildScrollView(
+          padding: EdgeInsets.all(kMainPadding),
+          child: Column(
+            children: [
+              SightCard(mocks[0]),
+              SightCard(mocks[1]),
+              SightCard(mocks[2]),
+              SightCard(mocks[3]),
+              SightCard(mocks[4]),
+              SightCard(mocks[5]),
+              SightCard(mocks[6]),
+              SightCard(mocks[7]),
+              SightCard(mocks[8]),
+              SightCard(mocks[9])
+            ],
+          ),
         ));
   }
 }

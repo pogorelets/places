@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 class Sight {
   final String nameSights;
   final double lat;
