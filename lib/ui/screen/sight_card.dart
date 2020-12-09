@@ -61,7 +61,7 @@ class SightCard extends StatelessWidget {
                     style: kHeadCardTextStyle,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: kPaddingTopTextDetail),
+                    padding: const EdgeInsets.only(top: kMinPaddingDetail),
                     child: Text(
                       sight.details,
                       style: kCardTextStyle,

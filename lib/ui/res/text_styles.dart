@@ -14,7 +14,6 @@ const kGreenAppBarTextStyle = TextStyle(
 
 const kYellowAppBarTextStyle = TextStyle(
   color: Colors.yellow,
-  color: kHeadTextColor,
   fontSize: kAppBarFontSize,
 );
 
@@ -36,14 +35,26 @@ const kTypeTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-const kHeadDetailsTextStyle =
-    TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: kHeadTextColor);
+const kHeadDetailsTextStyle = TextStyle(
+  fontSize: 24,
+  fontWeight: FontWeight.w700,
+  color: kHeadTextColor,
+);
 
 const kTypeDetailTextStyle = TextStyle(
-    fontWeight: FontWeight.w700, fontSize: 14.0, color: kHeadTextColor);
+  fontWeight: FontWeight.w700,
+  fontSize: 14.0,
+  color: kHeadTextColor,
+);
 
-const kModeTextStyle =
-    TextStyle(fontWeight: FontWeight.w400, fontSize: 14.0, color: kTextColor);
+const kModeTextStyle = TextStyle(
+  fontWeight: FontWeight.w400,
+  fontSize: 14.0,
+  color: kTextColor,
+);
 
 const kDetailTextStyle = TextStyle(
-    fontWeight: FontWeight.w400, fontSize: 14.0, color: kTextDetailColor);
+  fontWeight: FontWeight.w400,
+  fontSize: 14.0,
+  color: kTextDetailColor,
+);
