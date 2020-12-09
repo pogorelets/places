@@ -14,3 +14,4 @@ const kGreenButtonDetailHeight = 48.0;
 const kGalleryHeight = 360.0;
 const kPaddingDetail = 24.0;
 const kPaddingTopRoute = 32.0;
+const kRadiusImage = 16.0;
