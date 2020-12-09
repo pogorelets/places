@@ -1,14 +1,94 @@
 import 'package:places/domain/sight.dart';
 
-final List mocks = [sight1,sight2,sight3,sight4,sight5,sight6,sight7,sight8,sight9,sight10];
+final List mocks = [
+  sight1,
+  sight2,
+  sight3,
+  sight4,
+  sight5,
+  sight6,
+  sight7,
+  sight8,
+  sight9,
+  sight10,
+];
 
-var sight1 =  Sight("Мачу-Пикчу в Перу", -13.163722, -72.545139, "https://putidorogi-nn.ru/images/stories/yuzhnaya_amerika/peru/machu_pikchu_1.jpg", "последний оплот инков", "чудо света");
-var sight2 =  Sight("Водопад Анхель", 5.96975, -62.536389, "https://putidorogi-nn.ru/images/stories/yuzhnaya_amerika/venesuela/vodopad_anhel_1.jpg", "главное чудо Венесуэлы", "чудо света");
-var sight3 =  Sight("Ниагарский водопад в США", 43.077278, -79.07475, "https://putidorogi-nn.ru/images/stories/severnaya_amerika/niagarskiy_vodopad.jpg", "красота и величие водной стихии", "чудо света");
-var sight4 =  Sight("Древний город Чичен-Ица в Мексике", -20.683611, -88.569, "https://putidorogi-nn.ru/images/stories/severnaya_amerika/meksika/chichen_ica_1.jpg", "зловещее святилище древних майя", "чудо света");
-var sight5 =  Sight("Древний город майя Паленке", -17.484667, -92.046222, "https://putidorogi-nn.ru/images/stories/severnaya_amerika/meksika/palenke_1.jpg", "самый элегантный город индейской Америки", "чудо света");
-var sight6 =  Sight("Национальный парк Плитвицкие озёра", -44.880722, 15.615389, "https://putidorogi-nn.ru/images/stories/evropa/horvatiya/plitvickie_ozera_1.jpg", "царство озёр и водопадов", "чудо света");
-var sight7 =  Sight("Лувр", -13.163722, -72.545139, "https://putidorogi-nn.ru/images/stories/evropa/luvr.jpg", "сокровищница мировых шедевров", "чудо света");
-var sight8 =  Sight("Фьорды Норвегии", -13.163722, -72.545139, "https://putidorogi-nn.ru/images/stories/evropa/norvegiya/fordy_norvegii_1.jpg", "суровое величие первозданной природы", "чудо света");
-var sight9 =  Sight("Римский Колизей", -13.163722, -72.545139, "https://putidorogi-nn.ru/images/stories/evropa/italiya/rimskiy_kolizey_1.jpg", "символ величия «вечного города»", "чудо света");
-var sight10 =  Sight("Парфенон", -13.163722, -72.545139, "https://putidorogi-nn.ru/images/stories/evropa/greciya/parfenon_1.jpg", "эталон античного зодчества", "чудо света");
+var sight1 = Sight(
+    nameSights: "Мачу-Пикчу в Перу",
+    lat: -13.163722,
+    lon: -72.545139,
+    url:
+        "https://putidorogi-nn.ru/images/stories/yuzhnaya_amerika/peru/machu_pikchu_1.jpg",
+    details: "последний оплот инков",
+    type: "чудо света");
+var sight2 = Sight(
+    nameSights: "Водопад Анхель",
+    lat: 5.96975,
+    lon: -62.536389,
+    url:
+        "https://putidorogi-nn.ru/images/stories/yuzhnaya_amerika/venesuela/vodopad_anhel_1.jpg",
+    details: "главное чудо Венесуэлы",
+    type: "чудо света");
+var sight3 = Sight(
+    nameSights: "Ниагарский водопад в США",
+    lat: 43.077278,
+    lon: -79.07475,
+    url:
+        "https://putidorogi-nn.ru/images/stories/severnaya_amerika/niagarskiy_vodopad.jpg",
+    details: "красота и величие водной стихии",
+    type: "чудо света");
+var sight4 = Sight(
+    nameSights: "Древний город Чичен-Ица в Мексике",
+    lat: -20.683611,
+    lon: -88.569,
+    url:
+        "https://putidorogi-nn.ru/images/stories/severnaya_amerika/meksika/chichen_ica_1.jpg",
+    details: "зловещее святилище древних майя",
+    type: "чудо света");
+var sight5 = Sight(
+    nameSights: "Древний город майя Паленке",
+    lat: -17.484667,
+    lon: -92.046222,
+    url:
+        "https://putidorogi-nn.ru/images/stories/severnaya_amerika/meksika/palenke_1.jpg",
+    details: "самый элегантный город индейской Америки",
+    type: "чудо света");
+var sight6 = Sight(
+    nameSights: "Национальный парк Плитвицкие озёра",
+    lat: -44.880722,
+    lon: 15.615389,
+    url:
+        "https://putidorogi-nn.ru/images/stories/evropa/horvatiya/plitvickie_ozera_1.jpg",
+    details: "царство озёр и водопадов",
+    type: "чудо света");
+var sight7 = Sight(
+    nameSights: "Лувр",
+    lat: -13.163722,
+    lon: -72.545139,
+    url: "https://putidorogi-nn.ru/images/stories/evropa/luvr.jpg",
+    details: "сокровищница мировых шедевров",
+    type: "чудо света");
+var sight8 = Sight(
+    nameSights: "Фьорды Норвегии",
+    lat: -13.163722,
+    lon: -72.545139,
+    url:
+        "https://putidorogi-nn.ru/images/stories/evropa/norvegiya/fordy_norvegii_1.jpg",
+    details: "суровое величие первозданной природы",
+    type: "чудо света");
+var sight9 = Sight(
+    nameSights: "Римский Колизей",
+    lat: -13.163722,
+    lon: -72.545139,
+    url:
+        "https://putidorogi-nn.ru/images/stories/evropa/italiya/rimskiy_kolizey_1.jpg",
+    details: "символ величия «вечного города»",
+    type: "чудо света");
+var sight10 = Sight(
+    nameSights: "Парфенон",
+    lat: -13.163722,
+    lon: -72.545139,
+    url:
+        "https://putidorogi-nn.ru/images/stories/evropa/greciya/parfenon_1.jpg",
+    details: "эталон античного зодчества",
+    type: "чудо света");
