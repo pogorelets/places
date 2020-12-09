@@ -7,14 +7,30 @@ const kMainAppBarTextStyle = TextStyle(
   fontSize: kAppBarFontSize,
 );
 
-const kGreenAppBarTextStyle =
-    TextStyle(color: Colors.green, fontSize: kAppBarFontSize);
+const kGreenAppBarTextStyle = TextStyle(
+  color: Colors.green,
+  fontSize: kAppBarFontSize,
+);
 
-const kYellowAppBarTextStyle =
-    TextStyle(color: Colors.yellow, fontSize: kAppBarFontSize);
+const kYellowAppBarTextStyle = TextStyle(
+  color: Colors.yellow,
+  fontSize: kAppBarFontSize,
+);
 
 const kHeadCardTextStyle = TextStyle(
-    color: kHeadTextColor, fontSize: 16.0, fontWeight: FontWeight.w500);
+  color: kHeadTextColor,
+  fontSize: 16.0,
+  fontWeight: FontWeight.w500,
+);
 
-const kCardTextStyle =
-    TextStyle(color: kTextColor, fontSize: 14.0, fontWeight: FontWeight.w400);
+const kCardTextStyle = TextStyle(
+  color: kTextColor,
+  fontSize: 14.0,
+  fontWeight: FontWeight.w400,
+);
+
+const kTypeTextStyle = TextStyle(
+  color: Colors.white,
+  fontSize: 14,
+  fontWeight: FontWeight.bold,
+);

@@ -9,3 +9,4 @@ const kHeightLike = 18.0;
 const kTopLike = 19.0;
 const kRightLike = 18.0;
 const kPaddingTopTextDetail = 2.0;
+const kRadiusImage = 16.0;

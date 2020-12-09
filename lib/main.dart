@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'ui/screen/sight_card.dart';
-import 'ui/screen/sign_screen.dart';
+import 'ui/screen/sight_list_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SignLightScreen(),
+      home: SightListScreen(),
     );
   }
 }
