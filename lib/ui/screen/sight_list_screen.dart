@@ -16,20 +16,20 @@ class _SightListScreenState extends State<SightListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: kMyToolbarHeight,
+        toolbarHeight: myToolbarHeight,
         backgroundColor: Colors.transparent,
-        elevation: kAppBarElevation,
+        elevation: appBarElevation,
         title: Padding(
-          padding: EdgeInsets.only(top: kTitlePaddingTop),
+          padding: EdgeInsets.only(top: titlePaddingTop),
           child: Text(
             titleSignLightScreen,
             textAlign: TextAlign.left,
-            style: kMainAppBarTextStyle,
+            style: mainAppBarTextStyle,
           ),
         ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(kMainPadding),
+        padding: EdgeInsets.all(mainPadding),
         child: Column(
           children: [
             SightCard(mocks[0]),

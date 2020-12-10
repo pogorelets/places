@@ -13,62 +13,63 @@ class SightCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: kMainPadding),
+      padding: const EdgeInsets.only(bottom: mainPadding),
       child: Column(
         children: [
           Container(
-            height: kHeightImage,
+            height: heightImage,
             child: Stack(
               children: [
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.grey,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(kRadiusImage),
-                      topRight: Radius.circular(kRadiusImage),
-                    ), //  ,
+                      topLeft: Radius.circular(radiusImage),
+                      topRight: Radius.circular(radiusImage),
+                    ),
                   ),
                 ),
                 Positioned(
-                  top: kMainPadding,
-                  left: kMainPadding,
+                  top: mainPadding,
+                  left: mainPadding,
                   child: Text(
                     sight.type,
-                    style: kTypeTextStyle,
+                    style: typeTextStyle,
                   ),
                 ),
                 Positioned(
-                  top: kTopLike,
-                  right: kRightLike,
+                  top: topLike,
+                  right: rightLike,
                   child: Container(
                     color: Colors.red,
-                    width: kWidthLike,
-                    height: kHeightLike,
+                    width: widthLike,
+                    height: heightLike,
                   ),
                 ),
               ],
             ),
           ),
           Container(
-              padding: const EdgeInsets.all(kMainPadding),
-              width: double.infinity,
-              color: kBkgCardSightColor,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    sight.nameSights,
-                    style: kHeadCardTextStyle,
+            padding: const EdgeInsets.all(mainPadding),
+            width: double.infinity,
+            color: bkgCardSightColor,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  sight.nameSights,
+                  style: headCardTextStyle,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: minPaddingDetail),
+                  child: Text(
+                    sight.details,
+                    style: cardTextStyle,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: kMinPaddingDetail),
-                    child: Text(
-                      sight.details,
-                      style: kCardTextStyle,
-                    ),
-                  )
-                ],
-              ))
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

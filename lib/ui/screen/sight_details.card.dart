@@ -15,83 +15,83 @@ class SightDetails extends StatelessWidget {
           Stack(
             children: [
               Container(
-                height: kGalleryHeight,
+                height: galleryHeight,
                 color: Colors.blueGrey,
               ),
               Positioned(
-                top: kPositionBtnBackTop,
-                left: kPositionBtnBackLeft,
+                top: positionBtnBackTop,
+                left: positionBtnBackLeft,
                 child: Container(
-                  height: kBtnBackSize,
-                  width: kBtnBackSize,
+                  height: btnBackSize,
+                  width: btnBackSize,
                   color: Colors.white,
                 ),
               )
             ],
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kMainPadding),
+            padding: const EdgeInsets.symmetric(horizontal: mainPadding),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
-                  height: kPaddingDetail,
+                  height: paddingDetail,
                 ),
                 Text(
                   headDetail,
-                  style: kHeadDetailsTextStyle,
+                  style: headDetailsTextStyle,
                 ),
                 const SizedBox(
-                  height: kMinPaddingDetail,
+                  height: minPaddingDetail,
                 ),
                 Row(
                   children: [
                     Text(
                       typeDetail,
-                      style: kTypeDetailTextStyle,
+                      style: typeDetailTextStyle,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: kMainPadding),
-                      child: Text(closed, style: kModeTextStyle),
+                      padding: const EdgeInsets.only(left: mainPadding),
+                      child: Text(closed, style: modeTextStyle),
                     )
                   ],
                 ),
                 const SizedBox(
-                  height: kPaddingDetail,
+                  height: paddingDetail,
                 ),
                 Text(
                   testTextDetail,
-                  style: kDetailTextStyle,
+                  style: detailTextStyle,
                 ),
                 const SizedBox(
-                  height: kPaddingDetail,
+                  height: paddingDetail,
                 ),
                 Container(
-                    height: kGreenButtonDetailHeight,
+                    height: greenButtonDetailHeight,
                     width: double.infinity,
-                    color: kRouteButtonColor),
+                    color: routeButtonColor),
                 const SizedBox(
-                  height: kPaddingDetail,
+                  height: paddingDetail,
                 ),
                 Container(
-                  height: kHeightDetailLine,
-                  color: kLineDetailColor.withOpacity(kOpacityLineDetail),
+                  height: heightDetailLine,
+                  color: lineDetailColor.withOpacity(opacityLineDetail),
                 ),
                 SizedBox(
-                  height: kPaddingUnderLine,
+                  height: paddingUnderLine,
                 ),
                 Row(
                   children: [
                     Expanded(
                       child: Container(
-                        height: kButtonHeight,
+                        height: buttonHeight,
                         color: Colors.grey,
                         //
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        height: kButtonHeight,
+                        height: buttonHeight,
                         color: Colors.blueGrey,
                       ),
                     ),

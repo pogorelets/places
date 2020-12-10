@@ -2,59 +2,59 @@ import 'package:flutter/material.dart';
 import 'colors.dart';
 import 'constants.dart';
 
-const kMainAppBarTextStyle = TextStyle(
-  color: kHeadTextColor,
-  fontSize: kAppBarFontSize,
+const mainAppBarTextStyle = TextStyle(
+  color: headTextColor,
+  fontSize: appBarFontSize,
 );
 
-const kGreenAppBarTextStyle = TextStyle(
+const greenAppBarTextStyle = TextStyle(
   color: Colors.green,
-  fontSize: kAppBarFontSize,
+  fontSize: appBarFontSize,
 );
 
-const kYellowAppBarTextStyle = TextStyle(
+const yellowAppBarTextStyle = TextStyle(
   color: Colors.yellow,
-  fontSize: kAppBarFontSize,
+  fontSize: appBarFontSize,
 );
 
-const kHeadCardTextStyle = TextStyle(
-  color: kHeadTextColor,
+const headCardTextStyle = TextStyle(
+  color: headTextColor,
   fontSize: 16.0,
   fontWeight: FontWeight.w500,
 );
 
-const kCardTextStyle = TextStyle(
-  color: kTextColor,
+const cardTextStyle = TextStyle(
+  color: textColor,
   fontSize: 14.0,
   fontWeight: FontWeight.w400,
 );
 
-const kTypeTextStyle = TextStyle(
+const typeTextStyle = TextStyle(
   color: Colors.white,
   fontSize: 14,
   fontWeight: FontWeight.bold,
 );
 
-const kHeadDetailsTextStyle = TextStyle(
+const headDetailsTextStyle = TextStyle(
   fontSize: 24,
   fontWeight: FontWeight.w700,
-  color: kHeadTextColor,
+  color: headTextColor,
 );
 
-const kTypeDetailTextStyle = TextStyle(
+const typeDetailTextStyle = TextStyle(
   fontWeight: FontWeight.w700,
   fontSize: 14.0,
-  color: kHeadTextColor,
+  color: headTextColor,
 );
 
-const kModeTextStyle = TextStyle(
+const modeTextStyle = TextStyle(
   fontWeight: FontWeight.w400,
   fontSize: 14.0,
-  color: kTextColor,
+  color: textColor,
 );
 
-const kDetailTextStyle = TextStyle(
+const detailTextStyle = TextStyle(
   fontWeight: FontWeight.w400,
   fontSize: 14.0,
-  color: kTextDetailColor,
+  color: textDetailColor,
 );

@@ -1,3 +1,5 @@
+/// Достопримечательность - модель данных
+
 class Sight {
   final String nameSights;
   final double lat;
