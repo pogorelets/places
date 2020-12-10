@@ -52,7 +52,10 @@ class SightDetails extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: mainPadding),
-                      child: Text(closed, style: modeTextStyle),
+                      child: Text(
+                        closed,
+                        style: modeTextStyle,
+                      ),
                     )
                   ],
                 ),
@@ -67,9 +70,10 @@ class SightDetails extends StatelessWidget {
                   height: paddingDetail,
                 ),
                 Container(
-                    height: greenButtonDetailHeight,
-                    width: double.infinity,
-                    color: routeButtonColor),
+                  height: greenButtonDetailHeight,
+                  width: double.infinity,
+                  color: routeButtonColor,
+                ),
                 const SizedBox(
                   height: paddingDetail,
                 ),
@@ -86,7 +90,6 @@ class SightDetails extends StatelessWidget {
                       child: Container(
                         height: buttonHeight,
                         color: Colors.grey,
-                        //
                       ),
                     ),
                     Expanded(
