@@ -1,5 +1,5 @@
-const myToolbarHeight = 112.0;
-const appBarElevation = 0.0;
+const myToolbarHeight = 152.0;
+const appBarPaddingTop = 64.0;
 const titlePaddingTop = 40.0;
 const appBarFontSize = 32.0;
 const mainPadding = 16.0;
