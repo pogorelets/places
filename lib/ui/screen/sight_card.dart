@@ -52,15 +52,15 @@ class SightCard extends StatelessWidget {
                 ],
               ),
             ),
-
             ConstrainedBox(
               constraints: BoxConstraints(
                 minWidth: MediaQuery.of(context).size.width,
               ),
-                child: Container(
-                padding:
-                    const EdgeInsets.only(left: mainPadding, right: mainPadding),
-
+              child: Container(
+                padding: const EdgeInsets.only(
+                  left: mainPadding,
+                  right: mainPadding,
+                ),
                 color: bkgCardSightColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
