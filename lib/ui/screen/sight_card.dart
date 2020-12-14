@@ -12,83 +12,80 @@ class SightCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1.5,
-      child: Padding(
-        padding: const EdgeInsets.only(bottom: mainPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: heightImage,
-              child: Stack(
+    return Padding(
+      padding: const EdgeInsets.only(bottom: mainPadding),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            height: heightImage,
+            child: Stack(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(radiusImage),
+                      topRight: Radius.circular(radiusImage),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: mainPadding,
+                  left: mainPadding,
+                  child: Text(
+                    sight.type,
+                    style: typeTextStyle,
+                  ),
+                ),
+                Positioned(
+                  top: topLike,
+                  right: rightLike,
+                  child: Container(
+                    color: Colors.red,
+                    width: widthLike,
+                    height: heightLike,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              minWidth: MediaQuery.of(context).size.width,
+            ),
+            child: Container(
+              padding: const EdgeInsets.only(
+                left: mainPadding,
+                right: mainPadding,
+              ),
+              color: bkgCardSightColor,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(radiusImage),
-                        topRight: Radius.circular(radiusImage),
-                      ),
-                    ),
+                  SizedBox(
+                    height: mainPadding,
                   ),
-                  Positioned(
-                    top: mainPadding,
-                    left: mainPadding,
-                    child: Text(
-                      sight.type,
-                      style: typeTextStyle,
-                    ),
+                  Text(
+                    sight.nameSights,
+                    style: headCardTextStyle,
                   ),
-                  Positioned(
-                    top: topLike,
-                    right: rightLike,
-                    child: Container(
-                      color: Colors.red,
-                      width: widthLike,
-                      height: heightLike,
-                    ),
+                  SizedBox(
+                    height: minPaddingDetail,
+                  ),
+                  Text(
+                    sight.details,
+                    style: cardTextStyle,
+                  ),
+                  SizedBox(
+                    height: mainPadding,
                   ),
                 ],
               ),
             ),
-            ConstrainedBox(
-              constraints: BoxConstraints(
-                minWidth: MediaQuery.of(context).size.width,
-              ),
-              child: Container(
-                padding: const EdgeInsets.only(
-                  left: mainPadding,
-                  right: mainPadding,
-                ),
-                color: bkgCardSightColor,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    SizedBox(
-                      height: mainPadding,
-                    ),
-                    Text(
-                      sight.nameSights,
-                      style: headCardTextStyle,
-                    ),
-                    SizedBox(
-                      height: minPaddingDetail,
-                    ),
-                    Text(
-                      sight.details,
-                      style: cardTextStyle,
-                    ),
-                    SizedBox(
-                      height: mainPadding,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
