@@ -7,3 +7,4 @@ const closed = "закрыто до 09:00";
 const testTextDetail = "Пряный вкус радостной жизни вместе с шеф-поваром Изо Дзандзава, благодаря которой у гостей ресторана есть возможность выбирать из двух направлений: европейского и восточного";
 const textButtonPlan = "Запланировать";
 const textButtonFavorite = "В избранное";
+const testUrl = "https://putidorogi-nn.ru/images/stories/yuzhnaya_amerika/peru/machu_pikchu_1.jpg";

@@ -12,22 +12,31 @@ class SightDetails extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Stack(
-            children: [
-              Container(
-                height: galleryHeight,
-                color: Colors.blueGrey,
-              ),
-              Positioned(
-                top: positionBtnBackTop,
-                left: positionBtnBackLeft,
-                child: Container(
-                  height: btnBackSize,
-                  width: btnBackSize,
-                  color: Colors.white,
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: galleryHeight,
+            ),
+            child: Stack(
+              children: [
+                Center(child: CircularProgressIndicator()),
+                Container(
+                  child: Image.network(
+                    testUrl,
+                    fit: BoxFit.cover,
+                  ),
+                  height: galleryHeight,
                 ),
-              )
-            ],
+                Positioned(
+                  top: positionBtnBackTop,
+                  left: positionBtnBackLeft,
+                  child: Container(
+                    height: btnBackSize,
+                    width: btnBackSize,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: mainPadding),
