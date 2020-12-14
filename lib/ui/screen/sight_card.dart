@@ -21,9 +21,13 @@ class SightCard extends StatelessWidget {
             height: heightImage,
             child: Stack(
               children: [
+                Center(child: CircularProgressIndicator()),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.grey,
+                    image: DecorationImage(
+                      image: NetworkImage(sight.url),
+                      fit: BoxFit.fitWidth,
+                    ),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(radiusImage),
                       topRight: Radius.circular(radiusImage),
