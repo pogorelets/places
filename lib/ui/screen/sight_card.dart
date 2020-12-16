@@ -21,16 +21,22 @@ class SightCard extends StatelessWidget {
             height: heightImage,
             child: Stack(
               children: [
-                Center(child: CircularProgressIndicator()),
-                Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(sight.url),
-                      fit: BoxFit.fitWidth,
-                    ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width - mainPadding * 2,
+                  child: ClipRRect(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(radiusImage),
                       topRight: Radius.circular(radiusImage),
+                    ),
+                    child: Image.network(
+                      sight.url,
+                      fit: BoxFit.fitWidth,
+                      loadingBuilder: (context, child, progress) {
+                        if (progress == null)
+                          return child;
+                        else
+                          return CircularProgressIndicator();
+                      },
                     ),
                   ),
                 ),
@@ -59,11 +65,18 @@ class SightCard extends StatelessWidget {
               minWidth: MediaQuery.of(context).size.width,
             ),
             child: Container(
+              decoration: BoxDecoration(
+                color: bkgCardSightColor,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(radiusImage),
+                  bottomRight: Radius.circular(radiusImage),
+                ),
+              ),
               padding: const EdgeInsets.only(
                 left: mainPadding,
                 right: mainPadding,
               ),
-              color: bkgCardSightColor,
+
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
