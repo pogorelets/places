@@ -18,11 +18,16 @@ class SightDetails extends StatelessWidget {
             ),
             child: Stack(
               children: [
-                Center(child: CircularProgressIndicator()),
                 Container(
                   child: Image.network(
                     testUrl,
                     fit: BoxFit.cover,
+                    loadingBuilder: (context, child, progress) {
+                      if (progress == null)
+                        return child;
+                      else
+                        return CircularProgressIndicator();
+                    },
                   ),
                   height: galleryHeight,
                 ),
