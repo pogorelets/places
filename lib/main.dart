@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:places/ui/screen/sight_details.card.dart';
+import 'package:places/ui/screen/visiting_screen.dart';
 
+import 'mocks.dart';
 import 'ui/screen/sight_card.dart';
 import 'ui/screen/sight_list_screen.dart';
 
@@ -19,7 +21,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SightDetails(),//SightListScreen(),
+      home: VisitingScreen(
+        planSights: [mocks[0], mocks[1]],
+        visitedSights: [/*mocks[2], mocks[3]*/],
+      ), // SightListScreen(),//SightDetails(),
+
     );
   }
 }

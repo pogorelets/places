@@ -7,6 +7,9 @@ class Sight {
   final String url;
   final String details;
   final String type;
+  final String planDate;
+  final String visitDate;
+  final String timeTable;
 
   Sight({
     this.nameSights,
@@ -15,5 +18,8 @@ class Sight {
     this.url,
     this.details,
     this.type,
+    this.planDate,
+    this.visitDate,
+    this.timeTable
   });
 }

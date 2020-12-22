@@ -1,3 +1,5 @@
+///Карточка месте, её можно тоже сделать на основе MainCard
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
@@ -11,7 +13,7 @@ class SightCard extends StatelessWidget {
   const SightCard(this.sight);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)  {
     return Padding(
       padding: const EdgeInsets.only(bottom: mainPadding),
       child: Column(
@@ -52,7 +54,7 @@ class SightCard extends StatelessWidget {
                   top: topLike,
                   right: rightLike,
                   child: Container(
-                    color: Colors.red,
+                    child: Image.asset("res/icons/heart.png"),
                     width: widthLike,
                     height: heightLike,
                   ),
@@ -66,7 +68,7 @@ class SightCard extends StatelessWidget {
             ),
             child: Container(
               decoration: BoxDecoration(
-                color: bkgCardSightColor,
+                color: bkgCardColor,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(radiusImage),
                   bottomRight: Radius.circular(radiusImage),
