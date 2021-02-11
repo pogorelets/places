@@ -32,7 +32,7 @@ class IndicatorVisitingTabWidget extends StatelessWidget {
 }
 
 class InActiveTabWidget extends StatelessWidget {
-  final text;
+  final String text;
   const InActiveTabWidget({this.text});
 
   @override

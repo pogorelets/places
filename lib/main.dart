@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       home: VisitingScreen(
         planSights: [mocks[0], mocks[1]],
-        visitedSights: [/*mocks[2], mocks[3]*/],
+        visitedSights: [mocks[2], mocks[3]],
       ), // SightListScreen(),//SightDetails(),
 
     );

@@ -30,28 +30,12 @@ class VisitingScreen extends StatefulWidget {
 class _VisitingScreenState extends State<VisitingScreen> {
   @override
   Widget build(BuildContext context) {
-    var mainContainerHeight = MediaQuery.of(context).size.height -
-        bottomBarHeight -
-        heightBottomBarLine -
-        heightFavoriteToolbar -
-        customIndicatorsHeight -
-        MediaQuery.of(context).padding.top;
+    var mainContainerHeight = getMainContainerHeight();
 
     return DefaultTabController(
       length: countTabFavoritePlaces,
       child: Scaffold(
-        appBar: AppBar(
-          toolbarHeight: heightFavoriteToolbar,
-          title: Align(
-            alignment: Alignment.center,
-            child: Text(
-              favorite,
-              style: toolbarFavoriteTextStyle,
-            ),
-          ),
-          backgroundColor: Colors.transparent,
-          elevation: emptyElevationToolbar,
-        ),
+        appBar: buildAppBar(),
         body: ConstrainedBox(
           constraints: BoxConstraints(
             minWidth: MediaQuery.of(context).size.width,
@@ -61,83 +45,111 @@ class _VisitingScreenState extends State<VisitingScreen> {
             padding: const EdgeInsets.symmetric(horizontal: mainPadding),
             child: TabBarView(
               children: [
-                Column(
-                  children: [
-                    IndicatorVisitingTabWidget(
-                      widgets: [
-                        ActiveTabIndicatorWidget(text: want_visit),
-                        InActiveTabWidget(text: visited)
-                      ],
-                    ),
+                buildTab(
+                  mainContainerHeight,
+                  IndicatorVisitingTabWidget(
+                    widgets: [
+                      ActiveTabIndicatorWidget(text: want_visit),
+                      InActiveTabWidget(text: visited)
+                    ],
+                  ),
+                  PlaceholderWidget(
+                    assetImage: "res/Card.png",
+                    title: empty,
+                    message: mark_favorite_places,
+                  ),
+                  [
                     SizedBox(
-                      height: mainContainerHeight,
-                      child: Builder(
-                        builder: (context) {
-                          if (widget.planSights.isEmpty) {
-                            return PlaceholderWidget(
-                              assetImage: "res/Card.png",
-                              title: empty,
-                              message: mark_favorite_places,
-                            );
-                          } else {
-                            return SingleChildScrollView(
-                              child: Column(
-                                children: [
-                                  SizedBox(
-                                    height: paddingToTab,
-                                  ),
-                                  PlanSightCard(sight: widget.planSights[0]),
-                                  PlanSightCard(sight: widget.planSights[0]),
-                                ],
-                              ),
-                            );
-                          }
-                        },
-                      ),
+                      height: paddingToTab,
                     ),
+                    PlanSightCard(sight: widget.planSights[0]),
+                    PlanSightCard(sight: widget.planSights[0]),
                   ],
+                    widget.planSights,
                 ),
-                Column(children: [
+                buildTab(
+                  mainContainerHeight,
                   IndicatorVisitingTabWidget(
                     widgets: [
                       InActiveTabWidget(text: want_visit),
                       ActiveTabIndicatorWidget(text: visited)
                     ],
                   ),
-                  SizedBox(
-                    height: mainContainerHeight,
-                    child: Builder(
-                      builder: (context) {
-                        if (widget.planSights.isEmpty) {
-                          return PlaceholderWidget(
-                            assetImage: "res/GO.png",
-                            title: empty,
-                            message: mark_favorite_places,
-                          );
-                        } else {
-                          return SingleChildScrollView(
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  height: paddingToTab,
-                                ),
-                                VisitedSightCard(sight: widget.planSights[0]),
-                                VisitedSightCard(sight: widget.planSights[0]),
-                              ],
-                            ),
-                          );
-                        }
-                      },
-                    ),
+                  PlaceholderWidget(
+                    assetImage: "res/GO.png",
+                    title: empty,
+                    message: mark_favorite_places,
                   ),
-                ],
-                )
+                  [
+                    SizedBox(
+                      height: paddingToTab,
+                    ),
+                    VisitedSightCard(sight: widget.planSights[0]),
+                    VisitedSightCard(sight: widget.planSights[0]),
+                  ],
+                    widget.visitedSights,
+                ),
               ],
             ),
           ),
         ),
         bottomNavigationBar: BottomBarWidget(),
       ),
+    );
+  }
+
+  Column buildTab(
+    double mainContainerHeight,
+    Widget indicatorWidget,
+    Widget placeholder,
+    List<Widget> widgets,
+    List<Sight> sights,
+  ) {
+    return Column(
+      children: [
+        indicatorWidget,
+        SizedBox(
+          height: mainContainerHeight,
+          child: Builder(
+            builder: (context) {
+              if (sights.isEmpty) {
+                return placeholder;
+              } else {
+                return SingleChildScrollView(
+                  child: Column(children: widgets),
+                );
+              }
+            },
+          ),
+        ),
+      ],
+    );
+  }
+
+  double getMainContainerHeight() {
+    return MediaQuery.of(context).size.height -
+        bottomBarHeight -
+        heightBottomBarLine -
+        heightFavoriteToolbar -
+        customIndicatorsHeight -
+        MediaQuery.of(context).padding.top;
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      toolbarHeight: heightFavoriteToolbar,
+      title: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Align(
+          alignment: Alignment.center,
+          child: Text(
+            favorite,
+            style: toolbarFavoriteTextStyle,
+          ),
+        ),
+      ),
+      backgroundColor: Colors.transparent,
+      elevation: emptyElevationToolbar,
     );
   }
 }

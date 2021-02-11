@@ -14,7 +14,16 @@ class VisitedSightCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> textColumn = [
+
+    return MainCard(
+      sight: sight,
+      textColumn: getTextColumn(),
+      buttons: getButtons(),
+    );
+  }
+
+  List<Widget> getTextColumn(){
+    return [
       SizedBox(
         height: mainPadding,
       ),
@@ -37,8 +46,10 @@ class VisitedSightCard extends StatelessWidget {
         style: cardTextStyle,
       ),
     ];
+  }
 
-    List<Widget> buttons = [
+  List<Widget> getButtons() {
+    return [
       Positioned(
         top: topLike,
         right: rightLike,
@@ -58,11 +69,6 @@ class VisitedSightCard extends StatelessWidget {
         ),
       ),
     ];
-
-    return MainCard(
-      sight: sight,
-      textColumn: textColumn,
-      buttons: buttons,
-    );
   }
+
 }

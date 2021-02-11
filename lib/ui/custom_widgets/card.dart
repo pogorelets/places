@@ -19,36 +19,10 @@ class MainCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> widgets = [
-      SizedBox(
-        width: MediaQuery.of(context).size.width - mainPadding * 2,
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(radiusImage),
-            topRight: Radius.circular(radiusImage),
-          ),
-          child: Image.network(
-            sight.url,
-            fit: BoxFit.fitWidth,
-            loadingBuilder: (context, child, progress) {
-              if (progress == null)
-                return child;
-              else
-                return CircularProgressIndicator();
-            },
-          ),
-        ),
-      ),
-      Positioned(
-        top: mainPadding,
-        left: mainPadding,
-        child: Text(
-          sight.type,
-          style: typeTextStyle,
-        ),
-      ),
+      buildImageWidget(context),
+      buildTextType(),
     ];
     widgets.addAll(buttons);
-
 
     return Padding(
       padding: const EdgeInsets.only(bottom: mainPadding),
@@ -89,4 +63,38 @@ class MainCard extends StatelessWidget {
       ),
     );
   }
+
+  Positioned buildTextType() {
+    return Positioned(
+      top: mainPadding,
+      left: mainPadding,
+      child: Text(
+        sight.type,
+        style: typeTextStyle,
+      ),
+    );
+  }
+
+  SizedBox buildImageWidget(BuildContext context) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width - mainPadding * 2,
+      child: ClipRRect(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(radiusImage),
+          topRight: Radius.circular(radiusImage),
+        ),
+        child: Image.network(
+          sight.url,
+          fit: BoxFit.fitWidth,
+          loadingBuilder: (context, child, progress) {
+            if (progress == null)
+              return child;
+            else
+              return CircularProgressIndicator();
+          },
+        ),
+      ),
+    );
+  }
+
 }

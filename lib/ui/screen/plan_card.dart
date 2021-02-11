@@ -13,32 +13,42 @@ class PlanSightCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> textColumn =  [
-        SizedBox(
-          height: mainPadding,
-        ),
-        Text(
-          sight.nameSights,
-          style: headCardTextStyle,
-        ),
-        SizedBox(
-          height: minPaddingDetail,
-        ),
-        Text(
-          sight.planDate,
-          style: cardGreenTextStyle,
-        ),
-        SizedBox(
-          height: mainPadding,
-        ),
-        Text(
-          sight.timeTable,
-          style: cardTextStyle,
-        ),
-      ];
 
+    return MainCard(
+      sight: sight,
+      textColumn: getTextColumn(),
+      buttons: getButtons(),
+    );
+  }
 
-    List<Widget> buttons = [
+  List<Widget> getTextColumn(){
+    return [
+      SizedBox(
+        height: mainPadding,
+      ),
+      Text(
+        sight.nameSights,
+        style: headCardTextStyle,
+      ),
+      SizedBox(
+        height: minPaddingDetail,
+      ),
+      Text(
+        sight.planDate,
+        style: cardGreenTextStyle,
+      ),
+      SizedBox(
+        height: mainPadding,
+      ),
+      Text(
+        sight.timeTable,
+        style: cardTextStyle,
+      ),
+    ];
+  }
+
+  List<Widget> getButtons() {
+    return  [
       Positioned(
         top: topLike,
         right: rightLike,
@@ -58,11 +68,6 @@ class PlanSightCard extends StatelessWidget {
         ),
       ),
     ];
-
-    return MainCard(
-      sight: sight,
-      textColumn: textColumn,
-      buttons: buttons,
-    );
   }
+
 }

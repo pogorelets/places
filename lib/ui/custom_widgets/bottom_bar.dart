@@ -22,38 +22,39 @@ class BottomBarWidget extends StatelessWidget {
           height: bottomBarHeight,
           child: Row(
             children: [
-              Expanded(
-                child: Container(
-                  child: Image.asset(
-                    "res/bottom_navigation/list.png",
-                  ),
-                ),
+              BottomButtonWidget(
+                urlImage: "res/bottom_navigation/list.png",
               ),
-              Expanded(
-                child: Container(
-                  child: Image.asset(
-                    "res/bottom_navigation/Map.png",
-                  ),
-                ),
+              BottomButtonWidget(
+                urlImage: "res/bottom_navigation/Map.png",
               ),
-              Expanded(
-                child: Container(
-                  child: Image.asset(
-                    "res/bottom_navigation/Subtract.png",
-                  ),
-                ),
+              BottomButtonWidget(
+                urlImage: "res/bottom_navigation/Subtract.png",
               ),
-              Expanded(
-                child: Container(
-                  child: Image.asset(
-                    "res/bottom_navigation/Settings.png",
-                  ),
-                ),
+              BottomButtonWidget(
+                urlImage: "res/bottom_navigation/Settings.png",
               ),
             ],
           ),
         ),
       ],
+    );
+  }
+}
+
+class BottomButtonWidget extends StatelessWidget {
+  final String urlImage;
+
+  const BottomButtonWidget({this.urlImage});
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        child: Image.asset(
+          urlImage,
+        ),
+      ),
     );
   }
 }
