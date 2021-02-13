@@ -76,6 +76,8 @@ var sight6 = Sight(
         "https://putidorogi-nn.ru/images/stories/evropa/horvatiya/plitvickie_ozera_1.jpg",
     details: "царство озёр и водопадов",
     type: "чудо света",
+    planDate: "Запланировано на 15 окт 2021",
+    visitDate: "Цель достигнута 20 дек. 2020",
     timeTable: "закрыто до 09:00");
 var sight7 = Sight(
     nameSights: "Лувр",
@@ -94,6 +96,7 @@ var sight8 = Sight(
     url:
         "https://putidorogi-nn.ru/images/stories/evropa/norvegiya/fordy_norvegii_1.jpg",
     details: "суровое величие первозданной природы",
+    type: "чудо света",
     planDate: "Запланировано на 15 окт 2021",
     visitDate: "Цель достигнута 20 дек. 2020",
     timeTable: "закрыто до 09:00");

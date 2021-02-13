@@ -1,7 +1,6 @@
 ///Основная карточка, от которой можно собирать остальные как конструктор
 ///передавая объект Sight, список кнопок на карточке и список текстовых виджетов
-///На её основе сделаны карточка Хочу посетить и карточка Посетил
-///Если направление мысле верное, то переделаю и карточку места по аналогии
+///На её основе сделаны карточка Хочу посетить и карточка Посетил и карточка Места
 
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
@@ -19,7 +18,7 @@ class MainCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> widgets = [
-      buildImageWidget(context),
+      SightImage(url:sight.url),
       buildTextType(),
     ];
     widgets.addAll(buttons);
@@ -74,8 +73,13 @@ class MainCard extends StatelessWidget {
       ),
     );
   }
+}
 
-  SizedBox buildImageWidget(BuildContext context) {
+class SightImage  extends StatelessWidget {
+  final String url;
+  const SightImage({this.url});
+  @override
+  Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width - mainPadding * 2,
       child: ClipRRect(
@@ -84,7 +88,7 @@ class MainCard extends StatelessWidget {
           topRight: Radius.circular(radiusImage),
         ),
         child: Image.network(
-          sight.url,
+          url,
           fit: BoxFit.fitWidth,
           loadingBuilder: (context, child, progress) {
             if (progress == null)
@@ -96,5 +100,4 @@ class MainCard extends StatelessWidget {
       ),
     );
   }
-
 }
